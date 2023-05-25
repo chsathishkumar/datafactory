@@ -1,0 +1,27 @@
+{
+	"name": "ds_exist",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_source",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"filename": {
+				"type": "string"
+			}
+		},
+		"annotations": [],
+		"type": "Binary",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": {
+					"value": "@dataset().filename",
+					"type": "Expression"
+				},
+				"container": "target"
+			}
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}
