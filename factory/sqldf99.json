@@ -1,0 +1,9 @@
+{
+	"name": "sqldf99",
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "e915752c-cfd0-4245-a9a3-e78a5c133bba",
+		"tenantId": "6df8eddc-d996-41b2-9a87-17511d5522ba"
+	}
+}
