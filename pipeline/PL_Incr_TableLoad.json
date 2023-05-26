@@ -91,17 +91,15 @@
 							"typeProperties": {
 								"source": {
 									"type": "AzureSqlSource",
-									"sqlReaderQuery": {
-										"value": "@activity('LU_TargetDB').output.firstRow.match2",
-										"type": "Expression"
-									},
+									"sqlReaderQuery": "select * from emp where empid>103",
 									"queryTimeout": "02:00:00",
 									"partitionOption": "None"
 								},
 								"sink": {
 									"type": "AzureSqlSink",
 									"writeBehavior": "insert",
-									"sqlWriterUseTableLock": false
+									"sqlWriterUseTableLock": false,
+									"disableMetricsCollection": false
 								},
 								"enableStaging": false,
 								"translator": {
@@ -130,6 +128,11 @@
 				}
 			}
 		],
+		"parameters": {
+			"match22": {
+				"type": "int"
+			}
+		},
 		"annotations": []
 	}
 }
