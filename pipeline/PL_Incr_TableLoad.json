@@ -91,7 +91,10 @@
 							"typeProperties": {
 								"source": {
 									"type": "AzureSqlSource",
-									"sqlReaderQuery": "select * from emp where empid > ",
+									"sqlReaderQuery": {
+										"value": "@activity('LU_TargetDB').output.firstRow.match2",
+										"type": "Expression"
+									},
 									"queryTimeout": "02:00:00",
 									"partitionOption": "None"
 								},
