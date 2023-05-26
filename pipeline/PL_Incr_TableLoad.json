@@ -128,11 +128,6 @@
 				}
 			}
 		],
-		"parameters": {
-			"match22": {
-				"type": "int"
-			}
-		},
 		"annotations": []
 	}
 }
